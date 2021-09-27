@@ -1,0 +1,126 @@
+.newEmployeePopUp {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background: white;
+}
+
+.newEmployeePopUp .newEmployeePopUp-header {
+  background-color: #026dce;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+.newEmployeePopUp .newEmployeePopUp-header i {
+  color: white;
+  cursor: pointer;
+}
+
+.newEmployeePopUp .newEmployeePopUp-header h1 {
+  color: white;
+}
+
+.newEmployeePopUp form {
+  margin: 2rem auto;
+  width: 100%;
+  text-align: center;
+}
+
+.newEmployeePopUp form input {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+}
+
+.newEmployeePopUp form .add-form-button, .newEmployeePopUp form .cancel-button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  background-color: #026dce;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.newEmployeePopUp form .cancel-button {
+  background: silver;
+  margin: 0 0.5rem;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+header button {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  background-color: #026dce;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+main table tr:nth-child(even) {
+  background: #dddddd;
+}
+
+main table thead tr {
+  font-size: 1.3rem;
+}
+
+main table thead td {
+  padding: 1rem 0;
+}
+
+main table tbody td {
+  padding: 1rem 0;
+}
+
+main table tbody td .edit-button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #026dce;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main table tbody td .delete-button {
+  border: none;
+  padding: 0.5rem;
+  background: transparent;
+  color: red;
+  font-weight: 700;
+  cursor: pointer;
+}
+/*# sourceMappingURL=App.css.map */
