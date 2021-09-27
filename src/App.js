@@ -8,7 +8,7 @@ function App() {
   let [employee, setEmployee] = useState();
 
   function fetchData() {
-    return fetch('http://localhost:4000/employees')
+    return fetch('https://fathomless-island-20416.herokuapp.com/employees')
       .then((data) => data.json())
       .then((employeesData) => setEmployees(employeesData));
   }
@@ -24,7 +24,7 @@ function App() {
   }
 
   function handleDelete(id) {
-    fetch(`http://localhost:4000/employees/${id}`, {
+    fetch(`https://fathomless-island-20416.herokuapp.com/employees/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function App() {
     let designation = event.target.designation.value;
     let number = event.target.number.value;
 
-    fetch('http://localhost:4000/employees', {
+    fetch('https://fathomless-island-20416.herokuapp.com/employees', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -139,18 +139,21 @@ function App() {
     let designation = event.target.designation.value;
     let number = event.target.number.value;
 
-    fetch(`http://localhost:4000/employees/${employee.id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        firstName: firstName,
-        lastName: lastName,
-        designation: designation,
-        number: number,
-      }),
-    }).then((res) => {
+    fetch(
+      `https://fathomless-island-20416.herokuapp.com/employees/${employee.id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          designation: designation,
+          number: number,
+        }),
+      }
+    ).then((res) => {
       if (!res.ok) {
         alert('Error');
       } else {
@@ -291,7 +294,14 @@ function App() {
       </>
     );
   } else {
-    return <h1>No data</h1>;
+    return (
+      <div className="loader">
+        <div className="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
   }
 }
 
